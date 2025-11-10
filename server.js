@@ -36,4 +36,8 @@ app.get("/api-docs.json", (req, res) => {
     res.send(swaggerSpec);
 });
 app.use(errorHandler)
+
+app.get("/", (req, res) => {
+    res.send("Welcome to the Contact API")
+})
 connectDB()
